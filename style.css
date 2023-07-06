@@ -55,7 +55,8 @@ section {
 }
 
 #contact {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/shepherd-dog.jpg");
+	/* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/shepherd-dog.jpg"); */
+	background-color: bisque;
 	display: flex;
 	align-items: center;
 }
