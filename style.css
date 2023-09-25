@@ -51,7 +51,7 @@ main {
 }
 
 section {
-	height: 95vh;
+	height: 30vh;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -135,13 +135,13 @@ section {
 }
 
 #landing {
-	background-image: url("https://placehold.co/1280x720/lightgrey/grey?text=Landing");
+	background-image: url("https://placehold.co/1280x720/lightgrey/grey");
 }
 
 #promenades {
-	background-image: url("https://placehold.co/1280x720/blue/white?text=Promenades");
+	background-image: url("https://placehold.co/1280x720/blue/white");
 }
 
 #Prestation {
-	background-image: url("https://placehold.co/1280x720/yellow/orange?text=Prestation");
+	background-image: url("https://placehold.co/1280x720/yellow/orange");
 }
