@@ -95,7 +95,7 @@ section {
 	margin-right: 1em;
 }
 
-#contact form {
+#apropos form {
 	width: 90%;
 	display: flex;
 	flex-direction: column;
@@ -134,14 +134,18 @@ section {
 	border-radius: 1em;
 }
 
-#landing {
-	background-image: url("https://placehold.co/1280x720/lightgrey/grey");
+#accueil {
+	background-image: url("https://placehold.co/1280x720/lightgrey/grey?text=accueil");
 }
 
-#promenades {
-	background-image: url("https://placehold.co/1280x720/blue/white");
+#tarifs {
+	background-image: url("https://placehold.co/1280x720/grey/lightgrey?text=tarifs");
 }
 
-#Prestation {
-	background-image: url("https://placehold.co/1280x720/yellow/orange");
+#prestations {
+	background-image: url("https://placehold.co/1280x720/yellow/orange?text=prestations");
+}
+
+#apropos {
+	background-image: url("https://placehold.co/1280x720/orange/yellow?text=A%20propos");
 }
