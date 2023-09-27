@@ -1,3 +1,7 @@
+:root {
+    --header-height: 7vh;
+}
+
 * {
     margin: 0px;
 	padding: 0px;
@@ -10,7 +14,7 @@ a {
 
 html {
     scroll-behavior:smooth;
-	scroll-padding-top: 5vh;
+	scroll-padding-top: var(--header-height);
 }
 
 header {
@@ -18,7 +22,7 @@ header {
     background-color: white;
     z-index: 100;
 	width: 100%;
-    height: 7vh;
+    height: var(--header-height);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -55,14 +59,23 @@ header ul li a {
 
 main {
 	position: relative;
-	top: 7vh;
+	top: var(--header-height);
 }
 
 section {
-	height: 93vh;
+    display: flex;
+    align-items: center;
+	height: calc(100vh - var(--header-height));
 	scroll-snap-align: start;
     width: 50%;
     background-color: white;
+}
+
+p {
+    font-size: large;
+    line-height: 1.5em;
+    padding: 0 100px 0 100px;
+    text-align: center;
 }
 
 .section-right {
