@@ -1,7 +1,13 @@
+/******************
+** Variables CSS **
+******************/
 :root {
     --header-height: 7vh;
 }
 
+/************************
+** Généralités du site **
+************************/
 * {
     margin: 0px;
 	padding: 0px;
@@ -17,6 +23,9 @@ html {
 	scroll-padding-top: var(--header-height);
 }
 
+/********************
+** En-tête du site **
+********************/
 header {
     position: fixed;
     background-color: white;
@@ -30,18 +39,26 @@ header {
     align-items: center;
 }
 
+.logo {
+    height: 5vh;
+    margin-left: 1%;
+}
+
+/***********************
+** Navigation du site **
+***********************/
+nav > label, nav > #toggle
+{
+    display: none;
+}
+
 nav {
 	display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 
-.logo {
-    height: 5vh;
-    margin-left: 1%;
-}
-
-header ul {
+nav ul {
     list-style: none;
 	display: flex;
 	align-items: stretch;
@@ -49,14 +66,52 @@ header ul {
 	height: 100%;
 }
 
-header ul li {
+nav ul li {
 	margin-right: 30px;
 }
 
-header ul li a {
+nav ul li a {
 	font-size: 1.5em;
 }
 
+@media screen and (max-width: 991px) {
+    nav
+    {
+        height: 60px;
+    }
+ 
+    nav > ul 
+    {
+        display: none;
+        flex-direction: column;
+        background: #48435C;
+        height: 220px;
+    }
+ 
+    nav > ul a {
+        width: 50%;
+    }
+ 
+    nav > label 
+    {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+
+    #toggle:checked + ul {
+        display: flex;
+    }
+}
+
+/******************
+** Corps du site **
+******************/
 main {
 	position: relative;
 	top: var(--header-height);
