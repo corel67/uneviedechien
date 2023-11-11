@@ -3,6 +3,8 @@
 ******************/
 :root {
     --header-height: 7vh;
+    --light-blue: #5FB9E9;
+    --lighter-blue: #B1E2F3;
 }
 
 /************************
@@ -42,6 +44,7 @@ header {
     padding: 0 2% 0 2%;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid black;
 }
 
 .logo {
@@ -51,25 +54,105 @@ header {
 /***********************
 ** Navigation du site **
 ***********************/
-#navList {
-    display: none;
+@media screen and (max-width: 849px) {
+    #navList {
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0;
+        list-style: none;
+        background-color: var(--lighter-blue);
+        height: calc(100vh - var(--header-height));
+        width: 100vw;
+        left: 0;
+    }
+
+    #navList.open {
+        display: flex;
+    }
+
+    #navList li {
+        text-align: center;
+        border-bottom: 1px solid black;
+        background-color: var(--lighter-blue);
+    }
+
+    #navList li:first-of-type {
+        border-top: 1px solid black;
+    }
+
+    #navList a {
+        display: block;
+        width: 100vw;
+        line-height: 5em;
+    }
+
+    #navToggle {
+        font-size: calc(var(--header-height)/2);
+        line-height: var(--header-height);
+    }
+
+    #navToggle:hover {
+        cursor: pointer;
+    }
 }
 
-#navList.open {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 20px;
-    list-style: none;
-    background-color: blueviolet;
-    height: calc(100vh - var(--header-height));
+@media screen and (min-width: 850px) {
+    #navToggle {
+        display: none;
+    }
+
+    #navList {
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        row-gap: 0;
+        list-style: none;
+    }
+
+    #navList li {
+        text-align: center;
+    }
+
+    #navList li:not(:last-child) {
+        border-right: 1px solid black;
+    }
+
+    #navList a {
+        display: block;
+        width: 150px;
+        line-height: var(--header-height);
+    }
+}
+
+/**********************
+** Contenu principal **
+**********************/
+
+main {
+    padding-top: var(--header-height);
+}
+
+#accueil {
+    position: relative;
+    text-align: center;
+}
+
+#accueil img {
+    display: block;
+    width: 100vw;
+}
+
+#accueil h1 {
+    position: absolute;
+    top: 5%;
     width: 100%;
-    left: 0;
-    padding-top: 20px;
 }
 
-#navToggle {
-    font-size: calc(var(--header-height)/2);
-    line-height: var(--header-height);
+#accueil label {
+    display: block;
+    position: absolute;
+    top: 30%;
+    width: 100%;
 }
