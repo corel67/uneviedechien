@@ -134,23 +134,23 @@ main {
     padding-top: var(--header-height);
 }
 
-#accueil {
+#landing {
     position: relative;
     text-align: center;
 }
 
-#accueil img {
+#landing img {
     display: block;
     width: 100vw;
 }
 
-#accueil h1 {
+#landing h1 {
     position: absolute;
     top: 5%;
     width: 100%;
 }
 
-#accueil label {
+#landing label {
     display: block;
     position: absolute;
     top: 30%;
