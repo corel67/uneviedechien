@@ -134,6 +134,10 @@ main {
     padding-top: var(--header-height);
 }
 
+/*****************
+** Landing page **
+*****************/
+
 #landing {
     position: relative;
     text-align: center;
@@ -155,4 +159,28 @@ main {
     position: absolute;
     top: 30%;
     width: 100%;
+}
+
+/*************
+** Sections **
+*************/
+
+@media screen and (max-width: 849px) {
+    section:not(.unique) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    section.reverse {
+        flex-direction: column-reverse;
+    }
+
+    section>div>img {
+        display: block;
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 850px) {
 }
